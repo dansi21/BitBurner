@@ -11,7 +11,7 @@ export async function main(ns) {
   var growthCount = 0;
 
   while (true) {
-    if (ns.getServerMoneyAvailable(server) < 0.1 * initialMax) {
+    if (ns.getServerMoneyAvailable(server) < 0.9 * initialMax) {
       await ns.grow(server);
       growthCount += 0.004;
 

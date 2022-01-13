@@ -30,9 +30,9 @@ export async function main(ns) {
 
   if (numPortNeeded <= 0) {
     ns.nuke(server);
-    console.log("Break In Succeeded");
+    ns.toast("Break In Succeeded");
   } else {
-    console.log("Not Enough Ports Open - Break In Failed");
+    ns.toast("Not Enough Ports Open - Break In Failed");
   }
 
   ns.spawn("FarmHack.js", 1, server);

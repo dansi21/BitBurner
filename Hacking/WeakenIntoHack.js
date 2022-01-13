@@ -13,5 +13,5 @@ export async function main(ns) {
     await ns.weaken(server);
   }
 
-  ns.spawn("new.js", 1, server);
+  ns.spawn("FarmHack.js", 1, server);
 }

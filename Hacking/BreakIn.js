@@ -30,8 +30,8 @@ export async function main(ns) {
 
   if (numPortNeeded <= 0) {
     ns.nuke(server);
-    ns.print("Break In Succeeded");
+    ns.toast("Break In Succeeded");
   } else {
-    ns.print("Not Enough Ports Open - Break In Failed");
+    ns.toast("Not Enough Ports Open - Break In Failed");
   }
 }
