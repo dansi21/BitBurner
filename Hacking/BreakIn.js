@@ -1,6 +1,6 @@
 //Purpose: Used to automatically run all EXE present to break into a server. Will result in root access.
 //Arguments: {1:Target Server}
-//RAM Usage: 2.10 GB
+//RAM Usage: 2.15 GB
 
 /** @param {NS} ns **/
 export async function main(ns) {
@@ -28,7 +28,10 @@ export async function main(ns) {
     numPortNeeded--;
   }
 
-  if (numPortNeeded <= 0) {
+  if (
+    numPortNeeded <= 0 &&
+    ns.getHackingLevel() > ns.getServerRequiredHackingLevel(server)
+  ) {
     ns.nuke(server);
     ns.toast("Break In Succeeded");
   } else {
