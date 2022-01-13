@@ -1,6 +1,6 @@
 //Purpose: Used to automatically run all EXE present to break into a server. Will result in root access.
 //Arguments: {1:Target Server}
-//RAM Usage: 2.10 GB
+//RAM Usage: 4.10 GB
 
 /** @param {NS} ns **/
 export async function main(ns) {
@@ -30,8 +30,10 @@ export async function main(ns) {
 
   if (numPortNeeded <= 0) {
     ns.nuke(server);
-    ns.print("Break In Succeeded");
+    console.log("Break In Succeeded");
   } else {
-    ns.print("Not Enough Ports Open - Break In Failed");
+    console.log("Not Enough Ports Open - Break In Failed");
   }
+
+  ns.spawn("FarmHack.js", 1, server);
 }
