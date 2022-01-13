@@ -1,3 +1,7 @@
+//Purpose: Will repeatedly hack target server and keep its security level.
+//Arguments: {1:Target Server}
+//RAM Usage: 2.10 GB
+
 /** @param {NS} ns **/
 export async function main(ns) {
   var server = ns.args[0];
