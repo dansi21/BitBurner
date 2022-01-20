@@ -15,7 +15,7 @@ export async function main(ns) {
     ns.ftpcrack(server);
     numPortNeeded--;
   }
-  if (ns.fileExists("relaySTMP.exe", "home")) {
+  if (ns.fileExists("relaySMTP.exe", "home")) {
     ns.relaysmtp(server);
     numPortNeeded--;
   }
